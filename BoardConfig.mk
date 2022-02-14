@@ -140,6 +140,10 @@ BOARD_PREBUILT_ODMIMAGE := $(DEVICE_PATH)/prebuilt/odm.img
 
 TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_RECOVERY_AS_BOOT := true
