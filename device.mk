@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
 # Vendor_overlay
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/pissarro/vendor_overlay,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.xiaomi_mt6877
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
