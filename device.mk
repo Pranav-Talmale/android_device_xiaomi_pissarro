@@ -44,7 +44,17 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# first_stage_ramdisk
+# IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
+    $(LOCAL_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-goodix.idc
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
+
+# First Stage Ramdisk
 PRODUCT_COPY_FILES += \
     device/xiaomi/pissarro/vendor_overlay/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.emmc \
     device/xiaomi/pissarro/vendor_overlay/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.mt6877 
