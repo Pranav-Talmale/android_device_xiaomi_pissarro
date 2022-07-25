@@ -2,3 +2,6 @@ on init
     setprop sys.usb.ffs.aio_compat 1
 on property:sys.boot_completed=1
     chmod 0640 /sys/fs/selinux/enforce
+
+on post-fs
+    mount none /system/bin/hw/android.hardware.lights-service.mediatek /vendor/bin/hw/android.hardware.lights-service.mediatek bind
