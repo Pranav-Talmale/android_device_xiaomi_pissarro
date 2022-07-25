@@ -1,2 +1,5 @@
 on init
     setprop sys.usb.ffs.aio_compat 1
+
+on post-fs
+    mount none /system/bin/hw/android.hardware.lights-service.mediatek /vendor/bin/hw/android.hardware.lights-service.mediatek bind
