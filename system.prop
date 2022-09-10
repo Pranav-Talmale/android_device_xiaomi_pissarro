@@ -1,0 +1,5 @@
+Build.BRAND=MTK
+
+ro.control_privapp_permissions=log
+
+

@@ -134,6 +134,9 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # VNDK
 BOARD_VNDK_VERSION := current
 
