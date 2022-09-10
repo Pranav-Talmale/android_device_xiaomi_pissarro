@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "PissarroFrameworkResOverlay",
+    theme: "PissarroFrameworkResOverlay",
+    sdk_version: "current",
+    product_specific: true
+}
