@@ -57,7 +57,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/pissarro/vendor_overlay,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
 
 # Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
