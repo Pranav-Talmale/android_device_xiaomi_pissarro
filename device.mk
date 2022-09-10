@@ -44,6 +44,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# first_stage_ramdisk
+PRODUCT_COPY_FILES += \
+    device/xiaomi/pissarro/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.emmc \
+    device/xiaomi/pissarro/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.mt6877 \
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
