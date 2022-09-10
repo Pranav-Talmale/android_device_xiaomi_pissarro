@@ -47,7 +47,11 @@ PRODUCT_PACKAGES += \
 # first_stage_ramdisk
 PRODUCT_COPY_FILES += \
     device/xiaomi/pissarro/vendor_overlay/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.emmc \
-    device/xiaomi/pissarro/vendor_overlay/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.mt6877 \
+    device/xiaomi/pissarro/vendor_overlay/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.mt6877 
+
+# Init
+PRODUCT_COPY_FILES += \
+    device/xiaomi/pissarro/rootdir/etc/init.mt6877.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6877.rc 
 
 # Vendor_overlay
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/pissarro/vendor_overlay,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
