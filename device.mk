@@ -87,6 +87,16 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Properties
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
