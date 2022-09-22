@@ -158,3 +158,6 @@ TARGET_NO_RECOVERY := true
 
 # Treble
 BOARD_VNDK_VERSION := current
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-11-05
