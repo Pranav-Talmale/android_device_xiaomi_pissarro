@@ -68,6 +68,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Properties
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
+# Override props for debugging (idk if it works)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    ro.control_privapp_permissions=log
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
