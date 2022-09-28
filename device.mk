@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 $(call inherit-product, vendor/xiaomi/pissarro/pissarro-vendor.mk)
 
-PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_TARGET_VNDK_VERSION := 32
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # A/B
