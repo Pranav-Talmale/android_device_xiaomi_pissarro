@@ -68,14 +68,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Properties
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
-# Override props for debugging (idk if it works)
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    ro.debuggable=1 \
-    ro.control_privapp_permissions=log
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -165,172 +157,20 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@2.0.vendor
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1.vendor \
-    android.hardware.usb.gadget@1.1.vendor
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk_platform.vendor
-
-# Wi-Fi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor \
-    libkeystore-engine-wifi-hidl:64 \
-    libkeystore-wifi-hidl
-
-# Tethering
-PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.0.vendor
-
-# Secure element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor
-
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.0.vendor \
-    libsensorndkbridge
-
-# IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-service \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0.vendor \
-    android.hardware.ir@1.0
-
-# Soundtrigger
-PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl
-
-# Memtrack
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
-
-# Neutral Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-V1-ndk_platform.vendor \
-    android.hardware.power@1.3.vendor
-
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio@1.0 \
-    android.hardware.radio@1.1 \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.3 \
-    android.hardware.radio@1.4
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    libkeymaster4.vendor:64 \
-    libkeymaster4support.vendor:64 \
-    libkeymaster_portable.vendor:64 \
-    libkeymaster_messages.vendor:64 \
-    libsoft_attestation_cert.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
-    android.hardware.biometrics.fingerprint@2.2.vendor \
-    android.hardware.biometrics.fingerprint@2.3.vendor
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
-
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service
-
-# Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service
 
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
-    android.hardware.drm@1.3.vendor \
-    libmockdrmcryptoplugin \
-    libdrm.vendor \
-    libdrm
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Hardware trigger
-PRODUCT_PACKAGES += \
-    android.hardwareundtrigger@2.0 \
-    android.hardwareundtrigger@2.1 \
-    android.hardwareundtrigger@2.2
-
-# Dumpstate
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1.vendor
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor
-
-# TinyXML
-PRODUCT_PACKAGES += \
-    libtinyxml
-
-# Text classifier
-PRODUCT_PACKAGES += \
-    libtextclassifier_hash.vendor \
-    libtextclassifier_hash
-
-# Vendor service
-PRODUCT_PACKAGES += \
-    vndservice \
-    vndservicemanager
-
-# NQ Client
-PRODUCT_PACKAGES += \
-    libchrome.vendor
-
-# Additional libs
-PRODUCT_PACKAGES += \
-    libjsoncpp \
-    liblogwrap \
-    libmedialogservice \
-    libpcap \
-    libsparse \
-    libadbconnection_server \
-    libfusesideload \
-    libparameter \
-    libremote-processor \
-    libpcap.vendor \
-    libstagefright_softomx.vendor
