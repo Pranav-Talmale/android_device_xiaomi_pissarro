@@ -82,6 +82,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Properties
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
+# Excluded Input device
+PRODUCT_COPY_FILES := \
+$(LOCAL_PATH)/configs/manifests/excluded-input-devices.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/excluded-input-devices.xml
+
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
