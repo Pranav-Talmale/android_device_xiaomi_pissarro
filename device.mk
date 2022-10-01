@@ -65,6 +65,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.xiaomi_mt6877
+
 # Properties
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
