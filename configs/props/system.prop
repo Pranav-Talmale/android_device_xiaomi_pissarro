@@ -1,7 +1,25 @@
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
+persist.bluetooth.bluetooth_audio_hal.disabled=true
 
+# IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+
+#support dual wifi feature
+ro.vendor.net.enable_dual_wifi=1
 #
 # from device/xiaomi/pissarro/special_ro.prop
 #
+#adb
+ro.adb.secure=0
+persist.adb.notify=1
+persist.service.adb.enable=1
+persist.service.debuggable=1
+
+# Charger
+ro.charger.enable_suspend=true
 
 #logd buffer size
 ro.logd.size=2M
