@@ -74,20 +74,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.audio.effect@6.0-impl \
     audio.a2dp.default \
     audio_policy.stub \
     audio.r_submix.default \
-    audio.bluetooth.default \
-    audio.usb.default \
-    libalsautils \
-    libaudiofoundation.vendor \
-    libbluetooth_audio_session \
-    libtinycompress \
-    libaudio-resampler \
-    libaudiopolicyengineconfigurable
+    audio.usb.default
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
