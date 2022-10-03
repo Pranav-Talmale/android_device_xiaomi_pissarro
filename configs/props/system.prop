@@ -13,7 +13,6 @@ ro.vendor.net.enable_dual_wifi=1
 # from device/xiaomi/pissarro/special_ro.prop
 #
 #adb
-ro.adb.secure=0
 persist.adb.notify=1
 persist.service.adb.enable=1
 persist.service.debuggable=1
