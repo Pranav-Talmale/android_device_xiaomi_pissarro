@@ -1,53 +1,214 @@
-Build.BRAND=MTK
-dalvik.vm.dexopt.secondary=true
-external_storage.cross_user.enabled=1
-mediatek.wlan.ctia=0
-ro.all_modes.colorpick_adjust=true
-ro.audio.silent=0
-ro.camera.sound.forced=0
-ro.colorpick_adjust=true
-ro.charger.enable_suspend=true
-ro.displayfeature.histogram.enable=false
-ro.iorapd.enable=false
-ro.kernel.zio=38,108,105,16
-ro.logd.size=2M
-ro.malloc.impl=jemalloc
-ro.mediatek.wlan.p2p=1
-ro.mediatek.wlan.wsc=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-ro.mtk_perf_simple_start_win=1
-ro.opengles.version=196610
-ro.sys.usb.bicr=no
-ro.sys.usb.charging.only=yes
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
-ro.vendor.aod_layer.check=true
-ro.vendor.cabc.enable=true
-ro.vendor.display.default_fps=60
-ro.vendor.display.type=oled
-ro.vendor.fps.switch.default=true
-ro.vendor.gcp.enable=true
-ro.vendor.net.enable_passpoint_r1=1
-ro.vendor.net.enable_sla=1
-ro.vendor.radio.5g=3
-ro.vendor.radio.features_common=2
-ro.vendor.smart_dfps.enable=true
-ro.whitepoint_calibration_enable=false
-ro.zygote.preload.enable=0
-sys.displayfeature.entry.enable=true
-sys.displayfeature.hbm.enable=true
-sys.displayfeature_hidl=true
-sys.ipo.disable=1
-sys.ipo.pwrdncap=2
-vendor.rild.libargs=-d /dev/ttyC0
-vendor.rild.libpath=mtk-ril.so
-wifi.direct.interface=p2p0
-wifi.interface=wlan0
-wifi.tethering.interface=ap0
-ro.adb.secure=0
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
+persist.bluetooth.bluetooth_audio_hal.disabled=true
+
+# IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+
+#support dual wifi feature
+ro.vendor.net.enable_dual_wifi=1
+#
+# from device/xiaomi/pissarro/special_ro.prop
+#
+#adb
 persist.adb.notify=1
 persist.service.adb.enable=1
 persist.service.debuggable=1
-persist.sys.usb.config=mtp,adb
 
+# Charger
+ro.charger.enable_suspend=true
+
+#logd buffer size
+ro.logd.size=2M
+
+# 5g capability(0: not support 1:nsa 2:sa 3: 1+2)
+ro.vendor.radio.5g=3
+
+#Telephony features controller
+#value: 0000 0010
+ro.vendor.radio.features_common=2
+
+# enable wifi passpoint r1
+ro.vendor.net.enable_passpoint_r1=1
+
+# SLA
+ro.vendor.net.enable_sla=1
+
+#set aee mode enable
+#ro.vendor.aee.enforcing=no
+
+# White Point Calibration
+ro.whitepoint_calibration_enable=false
+#Property for display feature histogram
+ro.displayfeature.histogram.enable=false
+# support unlimited color temperature adjust
+ro.colorpick_adjust=true
+ro.all_modes.colorpick_adjust=true
+# displayfeature use poll to monitor backlight brightness
+ro.vendor.xiaomi.bl.poll=true
+
+#Property for NewGamePQ
+ro.vendor.gcp.enable=true
+
+# Property of FPS switch for system setting and powerkeeper
+ro.vendor.fps.switch.default=true
+
+# Property of the powerkeeper notify df
+ro.vendor.smart_dfps.enable=true
+
+# Property of default FPS for CTS
+ro.vendor.display.default_fps=60
+
+# Property for CABC
+ro.vendor.cabc.enable=true
+
+# Property for AMOLED panel
+ro.vendor.display.type=oled
+
+# prop for app copy during installation
+ro.miui.pm.install.buffer.size=49152
+
+# persist.lm.em.enabled=1
+persist.miui.extm.enable=1
+
+# prop for checking aod layer
+ro.vendor.aod_layer.check=true
+
+#
+# from device/mediatek/system/common/system.prop
+#
+ro.product.property_source_order=odm,vendor,product,system
+
+vendor.rild.libpath=mtk-ril.so
+vendor.rild.libargs=-d /dev/ttyC0
+
+
+wifi.interface=wlan0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+mediatek.wlan.ctia=0
+
+
+#
+wifi.tethering.interface=ap0
+#
+
+ro.opengles.version=196610
+# ro.kernel.qemu=1
+# ro.kernel.qemu.gles=0
+
+wifi.direct.interface=p2p0
+#dalvik.vm.heapgrowthlimit=256m
+#dalvik.vm.heapsize=512m
+
+# USB MTP WHQL
+ro.sys.usb.mtp.whql.enable=0
+
+# Power off opt in IPO
+sys.ipo.pwrdncap=2
+
+ro.sys.usb.storage.type=mtp
+
+# USB BICR function
+ro.sys.usb.bicr=no
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
+
+# audio
+ro.camera.sound.forced=0
+ro.audio.silent=0
+
+ro.zygote.preload.enable=0
+
+# temporary enables NAV bar (soft keys)
+qemu.hw.mainkeys=0
+
+ro.kernel.zio=38,108,105,16
+#ro.kernel.qemu=1
+#ro.kernel.qemu.gles=0
+#ro.boot.selinux=disable
+
+# Disable dirty region for Mali
+#debug.hwui.render_dirty_regions=false
+
+
+# performance
+ro.mtk_perf_simple_start_win=1
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+
+# disable ipo for development
+sys.ipo.disable=1
+
+# identity
+Build.BRAND=MTK
+
+# Disable iorapd
+ro.iorapd.enable=false
+
+#disable mtk aggressive_dex2oat
+pm.dexopt.aggressive_dex2oat.enable=false
+# end of device/mediatek/system/common/system.prop
+#
+# from device/xiaomi/pissarro/special_rw.prop
+#
+#enable aeev core dump
+#persist.vendor.aeev.core.dump=enable
+
+#enable sar feature
+persist.vendor.radio.dynamic_sar=1
+
+#system property for displayfeature hidl
+sys.displayfeature_hidl=true
+# displayfeature and displayfeatureservice use it to debug pq effect
+sys.displayfeature.entry.enable=true
+
+#system property for HBM mode
+sys.displayfeature.hbm.enable=true
+
+#system prop for dc backlight
+persist.displayfeature.dc_backlight.enable=false
+
+#For Test Factory Whether Calibrated
+##ACC/GYRO/ALS/PS/ALS_DARK/LUX_B/SAR/SAR_SECONDARY/...MAX_NUM=15
+persist.vendor.sensor.cali_sensor=111001110000000
+
+#modem crash dump collect
+persist.vendor.mdlog.need_dump=1
+persist.sys.mdlog_dumpback=2
+
+#enable wechat videocall beauty
+persist.vendor.vcb.ability=true
+persist.vendor.vcb.enable=false
+
+#
+# ADDITIONAL_BUILD_PROPERTIES
+#
+persist.vm.stackdump.threshold=0
+ro.malloc.impl=jemalloc
+setupwizard.feature.baseline_setupwizard_enabled=true
+persist.sys.slab.threshold=256000,358400,460800,665600,819200
+persist.binder.check.enable=true
+persist.binder.check.size=200
+external_storage.cross_user.enabled=1
+ro.sf.lcd_density=440
+ro.treble.enabled=true
+net.bt.name=Android
+ro.product.mod_device=pissarro_in_global
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.notification_sound=pixiedust.ogg
+ro.config.alarm_alert=Alarm_Classic.ogg
+ro.config.sms_received_sound=FadeIn.ogg
+ro.config.sms_delivered_sound=MessageComplete.ogg
+ro.com.android.mobiledata=false
+ro.config.elder-ringtone=Angel.mp3
+keyguard.no_require_sim=true
+ro.com.android.dataroaming=false
+persist.enable_task_snapshots=false
+persist.sys.watchdog_enhanced=true
+persist.sys.oom_crash_on_watchdog=true
+dalvik.vm.dexopt.secondary=true
+persist.sys.sysrqOnAnr_D_state=true
